@@ -1,0 +1,18 @@
+.circle-parent {
+    position: relative;
+
+    overflow: hidden;
+
+    background: radial-gradient(#3a57e8, #0048b2);
+}
+.circle {
+    position: absolute;
+
+    height: 63%;
+
+    opacity: 0.75;
+    border-radius: 50%;
+    box-shadow: inset 24px 32px 184px 24px rgba(6, 8, 89, 0.75);
+
+    aspect-ratio: 1/1;
+}

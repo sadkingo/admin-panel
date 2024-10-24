@@ -7,7 +7,7 @@ export default function Logo({ scale }) {
         height: height + "px",
         width: width + "px",
     }
-    return <div style={{ height: height + 3.2 * scale, width: height + 3.2 * scale}} className="logo">
+    return <div style={{ height: height + 3.2 * scale, width: height + 3.2 * scale }} className="logo">
         <div style={style} className="top-right rectangle"></div>
         <div style={style} className="bottom-right rectangle"></div>
         <div style={style} className="bottom-left rectangle"></div>

@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom/client"
-import Logo from "./pages/logo/logo";
-
+import Login from "./pages/login/login";
 function App() {
-    return <>
-        <Logo scale={6}></Logo>
-    </>
+    return <Login>
+    </Login>
 }
 
 ReactDom.createRoot(document.getElementById("app")).render(<App />)
