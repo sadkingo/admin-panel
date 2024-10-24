@@ -14,18 +14,21 @@
     transform: rotate(45deg) translate(90%, -31%);
 }
 .bottom-left {
-    background-color: transparent;
     transform: rotate(-45deg) translate(69%, 76%);
+
+    background-color: transparent;
 }
 .bottom-left::after {
     position: absolute;
-    border-radius: 75px;
-    content: "";
-    background-color: var(--color-main);
+
     width: 100%;
     height: 58% !important;
+
+    content: "";
+
+    border-radius: 75px;
+    background-color: var(--color-main);
 }
 .top-left {
     transform: rotate(45deg) translate(390%, -31%);
 }
-

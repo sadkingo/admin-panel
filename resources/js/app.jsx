@@ -4,7 +4,7 @@ import Logo from "./pages/logo/logo";
 
 function App() {
     return <>
-        <Logo scale={10}></Logo>
+        <Logo scale={6}></Logo>
     </>
 }
 
