@@ -1,6 +1,9 @@
 .rectangle {
     position: absolute;
 }
+.logo {
+    position: relative;
+}
 .logo > * {
     position: absolute;
 
