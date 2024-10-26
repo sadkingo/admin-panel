@@ -139,18 +139,20 @@ body {
 
     color: var(--color-subtitle);
 }
+
 .left-content > form > a:visited,
 .left-content > form > a {
     font-size: 16px;
 
     float: right;
 
-    margin-top: 8px;
+    margin-top: 5px;
 
     text-decoration: none;
 
     color: var(--color-main);
 }
+.left-content > p > a:hover,
 .left-content > form > a:hover {
     color: var(--color-main-light);
 }
@@ -164,20 +166,52 @@ body {
     margin: auto;
     margin-top: 24px;
 
+    cursor: pointer;
+
     color: var(--color-bg);
     border: 0;
+    border-radius: 4px;
     background-color: var(--color-main);
-    cursor: pointer;
 }
 .left-content > form > button[type="submit"]:hover {
     background-color: var(--color-main-light);
+}
+.left-content > p {
+    font-size: 16px;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    text-align: center;
+
+    color: var(--color-paragraph);
+}
+.social-media-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 168px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+.social-media-logos > a > img {
+    width: 24px;
+    height: 24px;
 }
 .right-content {
     width: 50%;
 
     background: radial-gradient(var(--color-main), var(--color-secondary));
 }
+.left-content > p > a:visited,
+.left-content > p > a {
+    font-size: 16px;
 
+    text-decoration: none;
+
+    color: var(--color-main);
+}
 @media screen and (max-width: 768px) {
     .left-content {
         width: 100%;

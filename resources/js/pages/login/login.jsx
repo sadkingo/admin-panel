@@ -1,6 +1,10 @@
 import "./login.style.css";
 import Circle from "./circle";
 import Logo from "../logo/logo"
+import facebookLogo from "../../../images/logos/logos--facebook.svg"
+import googleLogo from "../../../images/logos/logos--google-icon.svg"
+import instagramLogo from "../../../images/logos/logos--instagram.svg"
+import LinkedLogo from "../../../images/logos/logos--linkedin.svg"
 export default function Login() {
     const circleProps = [
         { bottom: -40, left: -182, diameter: 590 },
@@ -26,6 +30,14 @@ export default function Login() {
                 <a href="#">Forgot Password</a>
                 <button type="submit">Sign in</button>
             </form>
+            <p>or sign in with other accounts?</p>
+            <div className="social-media-logos">
+                <a href="#"><img src={googleLogo} alt="linkedin" /></a>
+                <a href="#"><img src={facebookLogo} alt="linkedin" /></a>
+                <a href="#"><img src={LinkedLogo} alt="linkedin" /></a>
+                <a href="#"><img src={instagramLogo} alt="linkedin" /></a>
+            </div>
+            <p>Don’t have an account? <a href="#">Click here to sign up.</a></p>
         </div>
         <div className="right-content circle-parent">
             {circleProps.map((circleProp, index) =>
