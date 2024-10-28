@@ -1,6 +1,5 @@
 import "./login.style.css";
-import Circle from "../../common/circle";
-import Logo from "../../common/logo"
+import { Circle, Form, Logo, Label } from "../../common"
 import facebookLogo from "../../../images/logos/logos--facebook.svg"
 import googleLogo from "../../../images/logos/logos--google-icon.svg"
 import instagramLogo from "../../../images/logos/logos--instagram.svg"
