@@ -1,19 +1,19 @@
-import "./css/label.style.css"
-export default function Label({
+import "./css/button.style.css"
+export default function Button({
     className,
     id,
+    type = "submit",
     style = {},
-    htmlFor,
     children,
     ...options
 }) {
-    return <label
+    return <button
         className={className}
         id={id}
-        htmlFor={htmlFor}
+        type="submit"
         style={style}
         {...options}
     >
         {children}
-    </label>
+    </button>
 }

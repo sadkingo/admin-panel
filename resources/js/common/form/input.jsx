@@ -1,19 +1,17 @@
-import "./css/label.style.css"
-export default function Label({
+import "./css/input.style.css"
+export default function Input({
     className,
     id,
     style = {},
-    htmlFor,
     children,
     ...options
 }) {
-    return <label
+    return <input
         className={className}
         id={id}
-        htmlFor={htmlFor}
         style={style}
         {...options}
+        defaultValue={children}
     >
-        {children}
-    </label>
+    </input>
 }

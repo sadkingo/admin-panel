@@ -1,3 +1,17 @@
 .custom-form {
     font-family: "Inter", sans-serif;
 }
+.custom-form > h1 {
+    margin-bottom: 16px;
+
+    text-align: center;
+}
+.custom-form > h4 {
+    font-weight: 400;
+
+    margin-bottom: 16px;
+
+    text-align: center;
+
+    color: var(--color-subtitle);
+}
