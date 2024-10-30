@@ -1,5 +1,6 @@
 import "./login.style.css";
-import { Circle, Form, Logo, Label } from "../../common"
+import Circle from "../../common/circle"
+import * as Ui from "../../common"
 import facebookLogo from "../../../images/logos/logos--facebook.svg"
 import googleLogo from "../../../images/logos/logos--google-icon.svg"
 import instagramLogo from "../../../images/logos/logos--instagram.svg"
@@ -14,21 +15,19 @@ export default function Login() {
     return <>
         <div className="left-content">
             <div className="head-logo">
-                <Logo scale={0.5} />
+                <Ui.Logo scale={0.5} />
                 <p>Hope Ui</p>
             </div>
-            <h1>Sign In</h1>
-            <h4>Sign in to stay connected.</h4>
-            <form>
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="example@example.com" />
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" />
-                <input type="checkbox" name="remember" id="remember" />
-                <label htmlFor="remember">Remember me?</label>
+            <Ui.Form title="Sign In" subtitle="Sign in to stay connected.">
+                <Ui.Label htmlFor={"email"}>Email</Ui.Label>
+                <Ui.Input type="email" name="email" id="email" placeholder="example@example.com" />
+                <Ui.Label htmlFor={"password"}>Password</Ui.Label>
+                <Ui.Input type="password" name="password" id="password" />
+                <Ui.Input type="checkbox" name="remember" id="remember" />
+                <Ui.Label htmlFor={"remember"}>Remember me?</Ui.Label>
                 <a href="#">Forgot Password</a>
-                <button type="submit">Sign in</button>
-            </form>
+                <Ui.Button>Sign in</Ui.Button>
+            </Ui.Form>
             <p>or sign in with other accounts?</p>
             <div className="social-media-logos">
                 <a href="#"><img src={googleLogo} alt="linkedin" /></a>
