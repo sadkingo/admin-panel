@@ -1,4 +1,4 @@
-.custom-form > input {
+.custom-form input {
     display: block;
 
     width: 100%;
@@ -11,22 +11,24 @@
     border: 1px var(--color-main) inset;
     border-radius: 4px;
 }
-.custom-form > input:focus-visible {
+.custom-form input:focus-visible {
     outline: 1px var(--color-secondary) solid;
 }
-.custom-form > input[type="checkbox"] {
+.custom-form input[type="checkbox"] {
     position: relative;
 
     display: inline;
 
     width: 14px;
     height: 14px;
+    margin-top: 6px;
+    margin-bottom: 1px;
     margin-right: 8px;
     padding: 1px;
 
     cursor: pointer;
 }
-.custom-form > input[type="checkbox"]::after {
+.custom-form input[type="checkbox"]::after {
     position: absolute;
 
     display: flex;
@@ -41,7 +43,7 @@
     background-color: var(--color-bg);
 }
 
-.custom-form > input[type="checkbox"]:checked::before {
+.custom-form input[type="checkbox"]:checked::before {
     position: absolute;
 
     display: flex;
@@ -55,7 +57,7 @@
     border-radius: 2px;
     background-color: var(--color-bg);
 }
-.custom-form > input[type="checkbox"]:checked::after {
+.custom-form input[type="checkbox"]:checked::after {
     position: absolute;
     top: -6px;
     left: -3px;
@@ -76,16 +78,7 @@
 .custom-form > input[type="checkbox"]:hover:checked::after {
     background-color: var(--color-main-light);
 }
-.custom-form > input[type="checkbox"]:hover:checked::before,
-.custom-form > input[type="checkbox"]:hover::after {
+.custom-form input[type="checkbox"]:hover:checked::before,
+.custom-form input[type="checkbox"]:hover::after {
     border-color: var(--color-main-light);
-}
-.custom-form > label[for="remember"] {
-    font-size: 16px;
-
-    display: inline;
-
-    height: 14px;
-
-    color: var(--color-subtitle);
 }

@@ -1,9 +1,10 @@
-.custom-form > label {
+.custom-form label{
+    display: block;
     font-size: 16px;
 
     color: var(--color-subtitle);
 }
-.custom-form > label[for="remember"] {
+.custom-form label[for="remember"] {
     font-size: 16px;
 
     display: inline;
@@ -11,4 +12,5 @@
     height: 14px;
 
     color: var(--color-subtitle);
+    cursor: pointer;
 }
