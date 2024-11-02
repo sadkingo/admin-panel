@@ -1,4 +1,5 @@
 import "./login.style.css";
+import { Link } from "react-router-dom";
 import Circle from "../../common/circle"
 import * as Ui from "../../common"
 import facebookLogo from "../../../images/logos/logos--facebook.svg"
@@ -35,7 +36,7 @@ export default function Login() {
                 <a href="#"><img src={LinkedLogo} alt="linkedin" /></a>
                 <a href="#"><img src={instagramLogo} alt="linkedin" /></a>
             </div>
-            <p>Don’t have an account? <a href="#">Click here to sign up.</a></p>
+            <p>Don’t have an account? <Link to="/sign-up">Click here to sign up.</Link></p>
         </div>
         <div className="right-content circle-parent">
             {circleProps.map((circleProp, index) =>
