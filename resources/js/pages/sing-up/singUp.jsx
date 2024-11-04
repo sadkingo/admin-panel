@@ -30,27 +30,27 @@ export default function SingUp() {
             <Ui.Form title="Sign Up" subtitle="Create your Hope UI account.">
                 <div className="input-group">
                     <Ui.Label htmlFor={"first-name"}>First Name</Ui.Label>
-                    <Ui.Input type="text" name="first_name" id="first-name"/>
+                    <Ui.Input type="text" name="first_name" id="first-name" required />
                 </div>
                 <div className="input-group">
                     <Ui.Label htmlFor="last-name">Last Name</Ui.Label>
-                    <Ui.Input type="text" name="last_name" id="last-name"/>
+                    <Ui.Input type="text" name="last_name" id="last-name" required />
                 </div>
                 <div className="input-group">
                     <Ui.Label htmlFor={"email"}>Email</Ui.Label>
-                    <Ui.Input type="email" name="email" id="email" placeholder="example@example.com" />
+                    <Ui.Input type="email" name="email" id="email" placeholder="example@example.com" required />
                 </div>
                 <div className="input-group">
                     <Ui.Label htmlFor={"tel"}>Phone No.</Ui.Label>
-                    <Ui.Input type="tel" name="tel" id="tel" placeholder="+213" />
+                    <Ui.Input type="tel" name="tel" id="tel" placeholder="+213" required />
                 </div>
                 <div className="input-group">
                     <Ui.Label htmlFor={"password"}>Password</Ui.Label>
-                    <Ui.Input type="password" name="password" id="password" />
+                    <Ui.Input type="password" name="password" id="password" required />
                 </div>
                 <div className="input-group">
                     <Ui.Label htmlFor={"passwordConfirmation"}>Confirm password</Ui.Label>
-                    <Ui.Input type="password" name="password_confirmation" id="passwordConfirmation" />
+                    <Ui.Input type="password" name="password_confirmation" id="passwordConfirmation" required />
                 </div>
                 <div className="custom-form center-elements">
                     <Ui.Input type="checkbox" name="remember" id="remember" />

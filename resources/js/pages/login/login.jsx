@@ -21,9 +21,9 @@ export default function Login() {
             </div>
             <Ui.Form title="Sign In" subtitle="Sign in to stay connected.">
                 <Ui.Label htmlFor={"email"}>Email</Ui.Label>
-                <Ui.Input type="email" name="email" id="email" placeholder="example@example.com" />
+                <Ui.Input type="email" name="email" id="email" placeholder="example@example.com" required />
                 <Ui.Label htmlFor={"password"}>Password</Ui.Label>
-                <Ui.Input type="password" name="password" id="password" />
+                <Ui.Input type="password" name="password" id="password" required/>
                 <Ui.Input type="checkbox" name="remember" id="remember" />
                 <Ui.Label htmlFor={"remember"}>Remember me?</Ui.Label>
                 <a href="#">Forgot Password</a>
