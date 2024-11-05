@@ -8,7 +8,7 @@
 .circle {
     position: absolute;
 
-    height: 63%;
+    width: 63%;
 
     opacity: 0.75;
     border-radius: 50%;
