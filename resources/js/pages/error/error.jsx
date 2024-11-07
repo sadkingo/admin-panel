@@ -1,5 +1,5 @@
 import "./error.style.css";
-import Circle from "../../common/circle";
+import Circle from "../../components/circle/Circle";
 import { Link } from "react-router-dom";
 
 export default function Error({ errorNumber, errorTitle, errorSubtitle }) {
@@ -10,10 +10,10 @@ export default function Error({ errorNumber, errorTitle, errorSubtitle }) {
         { id: 3, diameter: 1655, top: "50%" },
         { id: 4, diameter: 1900, top: "50%" },
     ]
-    return (<main>
+    return (<main className="error-page">
         <div className="error-number">{errorNumber}</div>
         {circleProps.map(circleProp =>
-            <Circle className="circle-mod"
+            <Circle className="error-page-circle"
                 key={circleProp.id}
                 {...circleProp}
             />)}

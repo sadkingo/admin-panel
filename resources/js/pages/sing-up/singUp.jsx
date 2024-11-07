@@ -1,7 +1,7 @@
 import "./singUp.style.css";
 import { Link } from "react-router-dom";
-import Circle from "../../common/circle"
-import * as Ui from "../../common"
+import Circle from "../../components/circle/Circle"
+import * as Ui from "../../components"
 import facebookLogo from "../../../images/logos/logos--facebook.svg"
 import googleLogo from "../../../images/logos/logos--google-icon.svg"
 import instagramLogo from "../../../images/logos/logos--instagram.svg"

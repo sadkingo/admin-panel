@@ -1,4 +1,4 @@
-import "./css/logo.style.css";
+import "./logo.style.css";
 
 export default function Logo({ scale }) {
     const height = 54.3 * scale;

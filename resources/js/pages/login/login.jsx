@@ -1,7 +1,7 @@
 import "./login.style.css";
 import { Link } from "react-router-dom";
-import Circle from "../../common/circle"
-import * as Ui from "../../common"
+import Circle from "../../components/circle/Circle"
+import * as Ui from "../../components"
 import facebookLogo from "../../../images/logos/logos--facebook.svg"
 import googleLogo from "../../../images/logos/logos--google-icon.svg"
 import instagramLogo from "../../../images/logos/logos--instagram.svg"
@@ -23,7 +23,7 @@ export default function Login() {
                 <Ui.Label htmlFor={"email"}>Email</Ui.Label>
                 <Ui.Input type="email" name="email" id="email" placeholder="example@example.com" required />
                 <Ui.Label htmlFor={"password"}>Password</Ui.Label>
-                <Ui.Input type="password" name="password" id="password" required/>
+                <Ui.Input type="password" name="password" id="password" required />
                 <Ui.Input type="checkbox" name="remember" id="remember" />
                 <Ui.Label htmlFor={"remember"}>Remember me?</Ui.Label>
                 <a href="#">Forgot Password</a>

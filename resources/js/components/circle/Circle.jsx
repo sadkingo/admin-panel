@@ -1,4 +1,4 @@
-import "./css/circle.css";
+import "./circle.style.css";
 export default function Circle({ top, right, bottom, left, diameter, className = "", ...options }) {
     const style = {
         width: diameter || "0%",
