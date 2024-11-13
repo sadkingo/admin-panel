@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import React from '@vitejs/plugin-react';
+import vitePluginSvgr from 'vite-plugin-svgr';
 
 export default defineConfig({
     plugins: [
@@ -8,6 +9,13 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.jsx'],
             refresh: true,
         }),
-        React()
+        React(),
+        vitePluginSvgr(),
     ],
+    resolve: {
+        alias: {
+            '@components': '/resources/js/components',
+            '@images': '/resources/images'
+        }
+    }
 });
