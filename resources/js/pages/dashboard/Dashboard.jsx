@@ -1,4 +1,4 @@
-import SettingsSideBar from "../../components/settings-side-bar/SettingsSideBar"
+import SettingsSideBar from "@components/settings-side-bar/SettingsSideBar"
 
 export default function Dashboard() {
     return (<>

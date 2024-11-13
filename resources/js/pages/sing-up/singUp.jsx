@@ -1,11 +1,11 @@
 import "./singUp.style.css";
 import { Link } from "react-router-dom";
-import Circle from "../../components/circle/Circle"
-import * as Ui from "../../components"
-import facebookLogo from "../../../images/logos/logos--facebook.svg"
-import googleLogo from "../../../images/logos/logos--google-icon.svg"
-import instagramLogo from "../../../images/logos/logos--instagram.svg"
-import LinkedLogo from "../../../images/logos/logos--linkedin.svg"
+import Circle from "@components/circle/Circle"
+import * as Ui from "@components"
+import facebookLogo from "@images/logos/logos--facebook.svg"
+import googleLogo from "@images/logos/logos--google-icon.svg"
+import instagramLogo from "@images/logos/logos--instagram.svg"
+import LinkedLogo from "@images/logos/logos--linkedin.svg"
 export default function SingUp() {
     const circleProps = [
         { top: -40, right: -182, diameter: 593 },
