@@ -6,7 +6,11 @@
     --color-paragraph: #232d42;
     --color-subtitle: #8a92a6;
     --color-shadow: rgba(6, 8, 89, 0.75);
+    --color-border-gray: #bbb;
+    --color-unselected: #8a92a6;
+    --color-selected: #3a57e8;
     --color-bg: #fff;
+    --color-btn-border: #bbb;
 }
 * {
     box-sizing: border-box;
