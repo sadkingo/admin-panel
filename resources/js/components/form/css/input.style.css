@@ -71,8 +71,8 @@
 
     background-color: var(--color-main);
 
-    mask-image: url(../../../../images/pajamas--check.svg);
-    -webkit-mask-image: url(../../../../images/pajamas--check.svg);
+    mask-image: url(@images/icons/pajamas--check.svg);
+    -webkit-mask-image: url(@images/icons/pajamas--check.svg);
     mask-size: cover;
 }
 .custom-form > input[type="checkbox"]:hover:checked::after {
