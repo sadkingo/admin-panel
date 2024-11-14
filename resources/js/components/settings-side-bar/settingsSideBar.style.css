@@ -1,9 +1,28 @@
-button {
+.open-setting-gear {
+    position: fixed;
+    top: 35%;
+    width: 35px;
+    height: 35px;
+    padding: 3px;
     cursor: pointer;
+    color: var(--color-bg);
+    border: none;
+    border-radius: 0 50% 50% 0;
+    background-color: var(--color-secondary);
+}
+.open-setting-gear:dir(rtl) {
+    right: 0;
+    border-radius: 50% 0 0 50%;
+}
+.open-setting-gear svg {
+    width: 100%;
+    height: 100%;
+    animation: spin 7s linear infinite;
 }
 .sidebar-menu {
     font-family: "Inter", sans-serif;
     position: fixed;
+    left: 0;
     display: flex;
     overflow: auto;
     flex-wrap: wrap;
@@ -11,6 +30,17 @@ button {
     width: 400px;
     max-height: 100vh;
     padding: 24px;
+    transition: all 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+    background-color: var(--color-bg);
+}
+.sidebar-menu:dir(rtl) {
+    right: 0;
+}
+.sidebar-menu--disabled {
+    left: -400px;
+}
+.sidebar-menu--disabled:dir(rtl) {
+    right: -400px;
 }
 .sidebar-menu img {
     display: flex;
@@ -19,6 +49,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.sidebar-menu button {
+    cursor: pointer;
 }
 .sidebar-menu hr {
     width: 50%;
@@ -77,7 +110,9 @@ button {
     overflow: visible;
     width: 16px;
     height: 16px;
-    margin-right: 10px;
+
+    margin-inline-end: 10px;
+    -webkit-margin-end: 10px;
 }
 .navbar-style,
 .sidebar-active-style,
@@ -85,12 +120,12 @@ button {
 .sidebar-types {
     font-size: 16px;
     display: grid;
+    width: 100%;
     text-align: center;
     color: var(--color-subtitle);
 
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    width: 100%;
 }
 .navbar-style > * > *,
 .sidebar-active-style > * > *,
@@ -126,11 +161,13 @@ button {
     border: var(--color-selected) 1px solid;
 }
 .circle-color {
-    margin-right: 10px;
     width: 15px;
     height: 15px;
     border: 2px solid black;
     border-radius: 50%;
+
+    margin-inline-end: 10px;
+    -webkit-margin-end: 10px;
 }
 .circle-color--dark {
     background-color: black;
@@ -150,8 +187,12 @@ button {
 .sidebar-types {
     grid-template-columns: repeat(3, 1fr);
 }
-
 .sidebar-active-style img,
 .navbar-style img {
     width: 100%;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }

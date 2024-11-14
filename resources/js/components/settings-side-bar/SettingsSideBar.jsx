@@ -1,4 +1,5 @@
 import './settingsSideBar.style.css'
+import React, { useState } from 'react'
 import exitX from '@images/icons/exit--x.svg'
 import LightningIcon from '@images/icons/lightning.svg?react';
 import MoonIcon from '@images/icons/moon.svg?react'
@@ -16,14 +17,27 @@ import HeaderGlass from '@images/header-glass.png'
 import HeaderColor from '@images/header-color.png'
 import HeaderSticky from '@images/header-sticky.png'
 import HeaderTransparent from '@images/header-transparent.png'
-import React from 'react'
+
 
 export default function SettingsSideBar() {
-    return (
-        <aside className='sidebar-menu'>
+    const [isActiveSidebar, setIsActiveSidebar] = useState(true);
+
+    function handleClose() {
+        setIsActiveSidebar(false)
+    }
+    function handleOpen() {
+        setIsActiveSidebar(true)
+    }
+    return (<>
+        <button className="open-setting-gear"
+            onClick={() => handleOpen()}
+            style={{ display: isActiveSidebar ? "none" : "block" }}>
+            <SettingsIcon />
+        </button>
+        <aside className={"sidebar-menu" + (isActiveSidebar ? "" : " sidebar-menu--disabled")}>
             <section className="sidebar-menu__head section">
                 <h1 className='head__title'>Settings</h1>
-                <button type='button' className="head__close">
+                <button onClick={() => handleClose()} type='button' className="head__close">
                     <img width={24} height={24} src={exitX} alt="exit" />
                 </button>
             </section>
@@ -139,5 +153,5 @@ export default function SettingsSideBar() {
                 <button className='sidebar-menu__reset-btn' type="button">Rest Default Settings</button>
             </div>
         </aside>
-    )
+    </>)
 }
