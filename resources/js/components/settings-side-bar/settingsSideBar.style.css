@@ -7,12 +7,15 @@
     cursor: pointer;
     color: var(--color-bg);
     border: none;
-    border-radius: 0 50% 50% 0;
+    border-radius: 50% 0 0 50%;
     background-color: var(--color-secondary);
 }
+.open-setting-gear:dir(ltr) {
+    right:0;
+}
 .open-setting-gear:dir(rtl) {
-    right: 0;
-    border-radius: 50% 0 0 50%;
+    left: 0;
+    border-radius: 0 50% 50% 0;
 }
 .open-setting-gear svg {
     width: 100%;
@@ -22,7 +25,7 @@
 .sidebar-menu {
     font-family: "Inter", sans-serif;
     position: fixed;
-    left: 0;
+
     display: flex;
     overflow: auto;
     flex-wrap: wrap;
@@ -33,14 +36,17 @@
     transition: all 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
     background-color: var(--color-bg);
 }
-.sidebar-menu:dir(rtl) {
+.sidebar-menu:dir(ltr) {
     right: 0;
 }
-.sidebar-menu--disabled {
-    left: -400px;
+.sidebar-menu:dir(rtl) {
+    left: 0;
+}
+.sidebar-menu--disabled:dir(ltr) {
+    right: -400px;
 }
 .sidebar-menu--disabled:dir(rtl) {
-    right: -400px;
+    left: -400px;
 }
 .sidebar-menu img {
     display: flex;

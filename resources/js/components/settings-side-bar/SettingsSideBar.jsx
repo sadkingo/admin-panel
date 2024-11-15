@@ -20,7 +20,7 @@ import HeaderTransparent from '@images/header-transparent.png'
 
 
 export default function SettingsSideBar() {
-    const [isActiveSidebar, setIsActiveSidebar] = useState(true);
+    const [isActiveSidebar, setIsActiveSidebar] = useState(false);
 
     function handleClose() {
         setIsActiveSidebar(false)
