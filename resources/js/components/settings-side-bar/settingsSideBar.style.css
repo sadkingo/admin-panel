@@ -1,4 +1,5 @@
 .open-setting-gear {
+    z-index: 999;
     position: fixed;
     top: 35%;
     width: 35px;
@@ -23,6 +24,7 @@
     animation: spin 7s linear infinite;
 }
 .sidebar-menu {
+    z-index: 999;
     font-family: "Inter", sans-serif;
     position: fixed;
 
