@@ -82,7 +82,7 @@
 .content {
     overflow: auto;
 }
-.section {
+.sidebar-menu .section {
     display: flex;
     flex: 1 1 100%;
     flex-wrap: wrap;
