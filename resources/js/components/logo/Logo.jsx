@@ -1,6 +1,6 @@
 import "./logo.style.css";
 
-export default function Logo({ scale }) {
+export default function Logo({ scale = 0.5 }) {
     const height = 54.3 * scale;
     const width = 7.7 * scale;
     const style = {
