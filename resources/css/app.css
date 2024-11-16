@@ -10,6 +10,7 @@
     --color-unselected: #8a92a6;
     --color-selected: #3a57e8;
     --color-bg: #fff;
+    --color-bg-secondary: #e6e9ee;
     --color-btn-border: #bbb;
 }
 * {
@@ -27,6 +28,7 @@ body {
 }
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-track {
     background: var(--color-main-light);
