@@ -4,7 +4,6 @@ export default function Menu({ mainMenu, isMenuActive }) {
     const [selectedMenuIndex, setSelectedMenuIndex] = useState(0);
 
     function handleMenuSelect(index) {
-        console.log(index);
         setSelectedMenuIndex(index)
     }
     return (
