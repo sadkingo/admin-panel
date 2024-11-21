@@ -1,0 +1,20 @@
+.nav-menu__group {
+    height: 100%;
+}
+.nav-menu__item {
+    height: 100%;
+}
+.nav-menu__item button[type="button"] {
+    color: var(--color-subtitle);
+    height: 100%;
+    cursor: pointer;
+    border: none;
+}
+.nav-menu__item button[type="button"]:hover {
+    opacity: 50%;
+}
+.nav-menu__profile-pic {
+    background-color: var(--color-bg-3);
+    border-radius: 50%;
+    overflow: hidden;
+}
