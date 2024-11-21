@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import React, { useState } from 'react'
 
 export default function Menu({ mainMenu, isMenuActive }) {
@@ -32,7 +33,16 @@ function SubMenu({ menuElem }) {
         <div className={`menu-group${selectedMenuSubIndex === index ? " selected" : ""}`} key={menu.id}>
             <button className={`menu-group__menu${selectedMenuSubIndex === index ? " selected" : ""}`}
                 onClick={() => handleSelect(index)}>
-                {menu.icon ? <menu.icon /> : ""} <span>{menu.title}</span>
+                <div className='menu-group__menu--title'>
+                    {menu.icon ? <Icon icon={menu.icon} width={28} textAnchor='left' /> : ""}
+                    <span >{menu.title}</span>
+                </div>
+                {
+                    menu.subMenus &&
+                    (<Icon icon="weui:arrow-filled"
+                        className={selectedMenuSubIndex === index ? "active" : ""}
+                    />)
+                }
             </button>
             {menu.subMenus && (<div className='menu-group__sub-menu'>
                 <SubMenu menuElem={menu.subMenus} />
