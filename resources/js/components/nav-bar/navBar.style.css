@@ -18,3 +18,17 @@
     border-radius: 50%;
     overflow: hidden;
 }
+.profile-name-role__name{
+    font-family: "inter";
+    font-size: 16px;
+}
+.profile-name-role__role{
+    font-family: "inter";
+    font-size: 13px;
+    color: var(--color-subtitle);
+}
+.profile-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

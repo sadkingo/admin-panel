@@ -23,19 +23,25 @@ export default function NavBar() {
             </li>
             <li className="nav-menu__item">
                 <button type="button">
-                <Icon icon="solar:bell-bold-duotone" height={"85%"} />
+                    <Icon icon="solar:bell-bold-duotone" height={"85%"} />
                 </button>
             </li>
             <li className="nav-menu__item">
                 <button type="button">
-                <Icon icon="lets-icons:message-alt-duotone" height={"85%"} />
+                    <Icon icon="lets-icons:message-alt-duotone" height={"85%"} />
                 </button>
             </li>
-            <li className="nav-menu__item nav-menu__profile-pic">
-                <button type="button">
-                <Icon icon="fluent-emoji-flat:man-mage" height={"100%"} />
-                </button>
-            </li>
+            <div className="profile-menu">
+                <li className="nav-menu__item nav-menu__profile-pic">
+                    <button type="button">
+                        <Icon icon="fluent-emoji-flat:man-mage" height={"100%"} />
+                    </button>
+                </li>
+                <li className="nav-menu__item profile-name-role">
+                    <p className="profile-name-role__name">Austin Robertson</p>
+                    <p className="profile-name-role__role">Marketing Administrator</p>
+                </li>
+            </div>
         </div>
     </ul>)
 }
