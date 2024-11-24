@@ -13,6 +13,8 @@
     --color-bg-secondary: #e6e9ee;
     --color-bg-3: #e9ecef;
     --color-btn-border: #bbb;
+    /* margins */
+    --color-side-menu-margin: 277px;
 }
 * {
     box-sizing: border-box;
@@ -24,7 +26,6 @@ body {
     height: 100vh;
 }
 #app {
-    overflow: auto;
     width: 100%;
 }
 ::-webkit-scrollbar {
