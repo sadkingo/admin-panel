@@ -9,15 +9,15 @@
     padding: 16px 32px;
     list-style: none;
     background-color: var(--color-bg);
-}
-.nav-menu__group {
-    display: flex;
 
-    gap: 15px;
+    grid-column: span 6;
 }
 .nav-menu__group {
     position: relative;
+    display: flex;
     height: 100%;
+
+    gap: 15px;
 }
 .nav-menu__item {
     height: 100%;

@@ -1,10 +1,18 @@
 import './sideMenu.style.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '@components/logo/Logo'
 import Menu from '@components/menu/menu'
 import { Icon } from '@iconify/react'
 export default function SideMenu() {
-    const [isMenuActive, setIsMenuActive] = useState(true)
+    const [isMenuActive, setIsMenuActive] = useState(true);
+    useEffect(() => {
+        if(!isMenuActive){
+            document.documentElement.style.setProperty('--color-side-menu-margin', '77px');
+        }else{
+            document.documentElement.style.setProperty('--color-side-menu-margin', '277px');
+        }
+        return () => document.documentElement.style.removeProperty('--color-side-menu-margin');;
+    }, [isMenuActive]);
     function handleOpenClose() {
         setIsMenuActive(!isMenuActive);
     }
