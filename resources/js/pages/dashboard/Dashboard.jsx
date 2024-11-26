@@ -3,6 +3,7 @@ import SideMenu from "@components/side-menu/SideMenu"
 import SettingsSideBar from "@components/settings-side-bar/SettingsSideBar"
 import NavBar from "@components/nav-bar/NavBar"
 import ReactApexChart from "react-apexcharts"
+import Circle from "@components/circle/Circle"
 
 export default function Dashboard() {
     const chartOptions = {
@@ -33,6 +34,8 @@ export default function Dashboard() {
             width: 3,
         },
         yaxis: {
+            max: 99,
+            min: 54,
             show: true,
             labels: {
                 show: true,
@@ -82,12 +85,24 @@ export default function Dashboard() {
             enabled: true,
         },
     };
+    const circleProps = [
+        { id: 0, diameter: 938, top: "60vh", right: "-100px" },
+        { id: 1, diameter: 1224, top: "60vh", right: "-100px" },
+        { id: 2, diameter: 1430, top: "60vh", right: "-100px" },
+        { id: 3, diameter: 1655, top: "60vh", right: "-100px" },
+        { id: 4, diameter: 1900, top: "60vh", right: "-100px" },
+    ]
     return (<main className="dashboard">
         <SettingsSideBar />
         <SideMenu />
         <div className="dashboard-content">
             <NavBar />
-            <div className="dashboard-content__head"></div>
+            <div className="dashboard-content__head circle-parent">
+            <h1>Hello Devs !</h1>
+                {circleProps.map(circleProp =>
+                    <Circle className="error-page__circle" key={circleProp.id} {...circleProp} />
+                )}
+            </div>
             <ReactApexChart
                 className={"area-chart"}
                 type={"area"}
