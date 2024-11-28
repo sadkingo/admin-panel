@@ -1,7 +1,6 @@
 import './sideMenu.style.css'
 import React, { useEffect, useState } from 'react'
 import Logo from '@components/logo/Logo'
-import Menu from '@components/menu/menu'
 import { Icon } from '@iconify/react'
 export default function SideMenu() {
     const [isMenuActive, setIsMenuActive] = useState(true);
@@ -118,3 +117,54 @@ export default function SideMenu() {
     )
 }
 
+// sub menu
+function Menu({ mainMenu, isMenuActive }) {
+    const [selectedMenuIndex, setSelectedMenuIndex] = useState(0);
+
+    function handleMenuSelect(index) {
+        setSelectedMenuIndex(index)
+    }
+    return (
+        mainMenu.map((menu, index) =>
+            <div key={menu.id}
+                onClick={() => { handleMenuSelect(index) }}
+                className={`side-menu__section sub-menu ${index === selectedMenuIndex ? "selected" : ""}`}>
+                <div className="sub-menu__title" > {isMenuActive ? menu.title : "-"}</div>
+                <div className='sub-menu__menu-group'>
+                    <SubMenu menuElem={menu.subMenus} />
+                </div>
+            </div>)
+    )
+}
+
+function SubMenu({ menuElem }) {
+    const [selectedMenuSubIndex, setSelectedMenuSubIndex] = useState(menuElem.map(() => false));
+    const handleSelect = (index) => {
+        if (index === selectedMenuSubIndex) {
+            setSelectedMenuSubIndex(-1);
+        } else {
+            setSelectedMenuSubIndex(index);
+        }
+    };
+    return (menuElem.map((menu, index) => (
+        <div className={`menu-group${selectedMenuSubIndex === index ? " selected" : ""}`} key={menu.id}>
+            <button className={`menu-group__menu${selectedMenuSubIndex === index ? " selected" : ""}`}
+                onClick={() => handleSelect(index)}>
+                <div className='menu-group__menu--title'>
+                    {menu.icon ? <Icon icon={menu.icon} width={28} textAnchor='left' /> : ""}
+                    <span >{menu.title}</span>
+                </div>
+                {
+                    menu.subMenus &&
+                    (<Icon icon="weui:arrow-filled"
+                        className={selectedMenuSubIndex === index ? "active" : ""}
+                    />)
+                }
+            </button>
+            {menu.subMenus && (<div className='menu-group__sub-menu'>
+                <SubMenu menuElem={menu.subMenus} />
+            </div>)}
+        </div>
+    ))
+    )
+}
