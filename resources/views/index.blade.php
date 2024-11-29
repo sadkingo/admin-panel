@@ -10,7 +10,6 @@
     <!-- React -->
     @viteReactRefresh
     @vite('resources/js/app.jsx')
-    <!-- Fonts -->
     <!-- Styles -->
     @vite('/resources/css/app.css')
 </head>
