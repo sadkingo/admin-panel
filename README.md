@@ -51,7 +51,7 @@ This is an Admin Panel project built using Laravel for the backend, React for th
 2. Start the Vite development server:
     ```bash
     npm run dev
-3. Access the application at http://localhost:8000 (or the specified address).
+3. Access the application at http://localhost:5173 (or the specified address).
 
 ## Technologies
 - Laravel - Backend framework
