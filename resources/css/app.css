@@ -10,11 +10,12 @@
     --color-unselected: #8a92a6;
     --color-selected: #3a57e8;
     --color-bg: #fff;
+    --color-font-main: #fff;
     --color-bg-secondary: #e6e9ee;
     --color-bg-3: #e9ecef;
     --color-btn-border: #bbb;
     /* margins */
-    --color-side-menu-margin: 277px;
+    --margin-side-menu-margin: 277px;
 }
 * {
     box-sizing: border-box;

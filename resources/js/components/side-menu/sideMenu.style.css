@@ -3,13 +3,13 @@
     position: fixed;
     z-index: 99;
     display: block;
-    width: var(--color-side-menu-margin);
+    width: var(--margin-side-menu-margin);
     height: 100%;
     transition: all 0.75s ease-in-out;
     background-color: var(--color-bg);
 }
 .side-menu--closed {
-    width: var(--color-side-menu-margin);
+    width: var(--margin-side-menu-margin);
 }
 .side-menu button[type="button"] {
     cursor: pointer;

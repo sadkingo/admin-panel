@@ -34,17 +34,24 @@ export default function DropMenu({ menuIcon, dropMenuItems, title, ...options })
                 <Icon icon={menuIcon} {...options} />
             </button>
             <ul className='drop-list'>
-                {title ? (<div className='drop-list__title'>
-                    {title}
-                </div>
-                ) : ""}
-                {dropMenuItems.map((menuItem) => (
-                    <li key={menuItem.id} className='drop-list__item'>
-                        {menuItem.item}
-                    </li>
-                ))}
+                {renderTitle(title)}
+                {dropMenuItems.map(renderDropMenuItem)}
             </ul>
         </div>
     )
 }
 
+function renderTitle(title) {
+    if (!title) return;
+    return (<div className='drop-list__title'>
+        {title}
+    </div>
+    )
+}
+function renderDropMenuItem(menuItem) {
+    return (
+        <li key={menuItem.id} className='drop-list__item'>
+            {menuItem.item}
+        </li>
+    )
+}

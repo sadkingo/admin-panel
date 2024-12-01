@@ -4,8 +4,14 @@ import SettingsSideBar from "@components/settings-side-bar/SettingsSideBar"
 import NavBar from "@components/nav-bar/NavBar"
 import ReactApexChart from "react-apexcharts"
 import Circle from "@components/circle/Circle"
+import { Icon } from "@iconify/react"
+import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import ChangingProgressProvider from "./ChangingProgressProvider"
+import { InView } from "react-intersection-observer"
+import { useState } from "react"
 
 export default function Dashboard() {
+    const [isMenuActive, setIsMenuActive] = useState(true);
     const chartOptions = {
         series: [{
             name: 'total',
@@ -94,22 +100,63 @@ export default function Dashboard() {
     ]
     return (<main className="dashboard">
         <SettingsSideBar />
-        <SideMenu />
+        <SideMenu isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
         <div className="dashboard-content">
             <NavBar />
             <div className="dashboard-content__head circle-parent">
-            <h1>Hello Devs !</h1>
+                <div className="head__group">
+                    <div className="head__group--title">Hello Devs !</div>
+                    <div className="head__group--subtitle">We are on a mission to help developers like you to build beautiful projects for free.</div>
+                    <button className="head__group--announcments">
+                        <Icon width={24} height={24} icon="fa6-solid:microphone-lines" />
+                        <span>Announcments</span>
+                    </button>
+                </div>
                 {circleProps.map(circleProp =>
                     <Circle className="error-page__circle" key={circleProp.id} {...circleProp} />
                 )}
             </div>
             <ReactApexChart
-                className={"area-chart"}
+                className={"area-chart card"}
                 type={"area"}
                 height={350}
                 series={chartOptions.series}
                 options={chartOptions} />
+
+            <InView>
+                {({ inView, ref, entry }) => (
+                    <ChangingProgressProvider values={[0, 50, 100]}>
+                        {percentage => (
+                            <CircularProgressbarWithChildren
+                                value={percentage}
+                                styles={buildStyles({
+                                    pathTransition:
+                                        "stroke-dashoffset 0.5s ease 0s"
+                                })}
+                            >
+                                <Icon icon="bi:arrow-up" width={"35%"} height={"35%"} style={{ rotate: "45deg", color: "gray" }} />
+                            </CircularProgressbarWithChildren>
+                        )}
+                    </ChangingProgressProvider>
+                )}
+            </InView>
+
         </div>
+
     </main>)
 }
 
+function Example(props) {
+    return (
+        <div style={{ marginBottom: 80 }}>
+            <hr style={{ border: "2px solid #ddd" }} />
+            <div style={{ marginTop: 30, display: "flex" }}>
+                <div style={{ width: "30%", paddingRight: 30 }}>{props.children}</div>
+                <div style={{ width: "70%" }}>
+                    <h3 className="h5">{props.label}</h3>
+                    <p>{props.description}</p>
+                </div>
+            </div>
+        </div>
+    );
+}

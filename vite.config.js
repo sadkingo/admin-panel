@@ -15,7 +15,8 @@ export default defineConfig({
     resolve: {
         alias: {
             '@components': '/resources/js/components',
-            '@images': '/resources/images'
+            '@images': '/resources/images',
+            '@constants': '/resources/js/constants',
         }
     }
 });
