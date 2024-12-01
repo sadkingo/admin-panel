@@ -1,4 +1,4 @@
-import "./singUp.style.css";
+import "./signUp.style.css";
 import { Link } from "react-router-dom";
 import Circle from "@components/circle/Circle"
 import * as Ui from "@components"
