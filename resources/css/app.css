@@ -14,7 +14,7 @@
     --color-bg-3: #e9ecef;
     --color-btn-border: #bbb;
     /* margins */
-    --color-side-menu-margin: 277px;
+    --margin-side-menu-margin: 277px;
 }
 * {
     box-sizing: border-box;
