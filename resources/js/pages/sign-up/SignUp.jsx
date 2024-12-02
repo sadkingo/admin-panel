@@ -1,6 +1,6 @@
 import "./signUp.style.css";
 import { Link } from "react-router-dom";
-import Circle from "@components/circle/Circle"
+import Circle from "@components/circle/Circle.component"
 import * as Ui from "@components"
 import facebookLogo from "@images/logos/logos--facebook.svg"
 import googleLogo from "@images/logos/logos--google-icon.svg"
