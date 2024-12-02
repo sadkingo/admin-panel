@@ -11,7 +11,7 @@ function DropMenu({
     handleActiveDropMenu,
     dropMenuRef,
 }) {
-    
+
     return (
         <div
             className={`drop-menu ${isMenuActive ? "active" : ""}`}
