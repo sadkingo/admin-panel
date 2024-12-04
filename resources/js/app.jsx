@@ -2,11 +2,11 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ReactDom from "react-dom/client"
-import Dashboard from "./pages/dashboard/Dashboard";
-import Login from "./pages/login";
-import SingUp from "./pages/sign-up/SignUp";
-import ErrorPage from "./pages/ErrorPage";
-import Dev from "./pages/dev/Dev";
+import Dashboard from "@pages/dashboard/Dashboard";
+import Login from "@pages/login";
+import SingUp from "@pages/sign-up";
+import ErrorPage from "@pages/ErrorPage";
+import Dev from "@pages/dev/Dev";
 
 const router = createBrowserRouter([{
     path: "/login",
