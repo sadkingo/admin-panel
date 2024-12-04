@@ -12,14 +12,15 @@ function FieldContainer({
     className = "",
     name = type,
     value = "",
-    placeholder = type,
+    placeholder = "",
     label = "",
     disabled,
     isChecked = false,
     required,
     ...rest
 }) {
-    id || (id = `${id}-${useMemo(idGenerator, [])}`);
+    const generatedId = useMemo(() => idGenerator(), []);
+
     const fieldRef = useRef(null);
     const [fieldValue, setFieldValue] = useState(value)
 
@@ -71,7 +72,7 @@ function FieldContainer({
 
     return (
         <Field
-            id={id}
+            id={id || `${type}-${generatedId}`}
             type={type}
             value={value}
             className={"Field " + className}
