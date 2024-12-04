@@ -15,7 +15,7 @@ function FormContainer({
     return (
         <Form
             id={`${id}-${idGenerator()}`}
-            className={`Form ${className}`}
+            className={className}
             action={action}
             method={method}
             label={label}

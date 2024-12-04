@@ -4,13 +4,13 @@
 .Form > * {
     display: inline;
 }
-.Form > h1 {
+.Form h1 {
     display: block;
     margin-bottom: 16px;
 
     text-align: center;
 }
-.Form > h4 {
+.Form h4 {
     display: block;
     font-weight: 400;
 
