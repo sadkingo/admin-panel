@@ -75,17 +75,17 @@ function Header({
     }
 
     function renderDropMenu(menu, index) {
-
-        return (<li className="nav-menu__item">
-            <DropMenu
-                key={index}
-                title={menu.title}
-                menuIcon={menu.icon}
-                dropMenuItems={menu.items}
-                height={"85%"}
-            />
-        </li>
+        return (
+            <li key={index} className="nav-menu__item">
+                <DropMenu
+                    title={menu.title}
+                    menuIcon={menu.icon}
+                    dropMenuItems={menu.items}
+                    height={"85%"}
+                />
+            </li>
         )
     }
 }
 
+export default Header;
