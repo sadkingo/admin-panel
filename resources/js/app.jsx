@@ -15,6 +15,15 @@ const router = createBrowserRouter([{
     path: "/sign-up",
     element: <SingUp />
 }, {
+    path: "/dev",
+    element: (process.env.NODE_ENV === 'development')
+        ? (<Dev />)
+        : <ErrorPage
+            errorNumber={404}
+            errorTitle="Oops! This Page is Not Found."
+            errorSubtitle="The requested page dose not exist"
+        />
+}, {
     path: "*",
     element: <Error
         errorNumber={404}
