@@ -1,13 +1,15 @@
 import Field from "./Field.component";
 
+import { useEffect, useMemo, useRef, useState } from "react";
+
 import { getEventsFromElementParams } from "@util/getEventsFromElementParams";
 import { getElementOptions } from "@util/getElementOptions";
-import { useEffect, useRef, useState } from "react";
 import idGenerator from "@util/idGenerator";
 
 function FieldContainer({
+    id,
     type = "text",
-    id = type,
+    className = "",
     name = type,
     value = "",
     placeholder = type,
@@ -17,6 +19,7 @@ function FieldContainer({
     required,
     ...rest
 }) {
+    id || (id = `${id}-${useMemo(idGenerator, [])}`);
     const fieldRef = useRef(null);
     const [fieldValue, setFieldValue] = useState(value)
 
@@ -68,9 +71,10 @@ function FieldContainer({
 
     return (
         <Field
-            id={`${id}-${idGenerator()}`}
+            id={id}
             type={type}
             value={value}
+            className={"Field " + className}
             placeholder={placeholder}
             label={label}
             name={name}

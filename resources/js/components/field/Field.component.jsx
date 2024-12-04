@@ -3,6 +3,7 @@ import { forwardRef } from "react";
 
 const Field = forwardRef(function ({
     id,
+    className,
     type,
     value,
     fieldValue,
@@ -38,7 +39,7 @@ const Field = forwardRef(function ({
     }
 
     return (
-        <div className={"Field"}>
+        <div className={className}>
             {renderErrorMessages()}
             {renderLabel()}
             {
@@ -63,10 +64,12 @@ const Field = forwardRef(function ({
         return (
             <input
                 id={id}
+                className={className}
                 type={type}
                 name={name}
                 value={fieldValue}
                 placeholder={placeholder}
+                required
                 ref={ref}
                 disabled={isDisabled}
                 onChange={onChange}
@@ -81,6 +84,7 @@ const Field = forwardRef(function ({
                 htmlFor={id}
             >
                 <input
+                    className={className}
                     id={id}
                     type={type}
                     name={name}
@@ -112,6 +116,7 @@ const Field = forwardRef(function ({
     function renderTextarea() {
         return (
             <textarea
+                className={className}
                 ref={ref}
                 disabled={isDisabled}
                 onChange={onChange}
@@ -122,6 +127,7 @@ const Field = forwardRef(function ({
     function renderButton() {
         return (
             <button
+                className={className}
                 id={id}
                 ref={ref}
                 disabled={isDisabled}
