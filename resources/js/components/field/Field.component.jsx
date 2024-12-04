@@ -131,6 +131,7 @@ const Field = forwardRef(function ({
                 id={id}
                 ref={ref}
                 disabled={isDisabled}
+                {...options}
             >
                 {value}
             </button>
