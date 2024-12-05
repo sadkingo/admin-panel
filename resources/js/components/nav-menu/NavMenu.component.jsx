@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react'
 import Logo from '@components/logo'
 import { SIDE_BAR_MARGIN } from '@configs/marginConst'
 import { menusData } from './NavMenu.config'
-import ButtonMenu from '@components/buttonMenu'
+import ButtonMenu from '@components/button-menu'
 
 function NavMenu({ isMenuActive, setIsMenuActive }) {
     const sideBarStyleWidth = isMenuActive

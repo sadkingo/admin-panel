@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import ButtonSubMenu from "@components/buttonSubMenu";
+import ButtonSubMenu from "@components/button-sub-menu";
 
 function ButtonMenu({ menu, index, isMenuActive }) {
     const [selectedMenuIndex, setSelectedMenuIndex] = useState(0);
