@@ -8,9 +8,6 @@
     transition: all 0.75s ease-in-out;
     background-color: var(--color-bg);
 }
-.side-menu--closed {
-    width: var(--margin-side-menu-margin);
-}
 .side-menu button[type="button"] {
     cursor: pointer;
 }

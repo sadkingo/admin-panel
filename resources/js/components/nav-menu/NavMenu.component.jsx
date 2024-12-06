@@ -13,6 +13,7 @@ function NavMenu({ isMenuActive, setIsMenuActive }) {
         ? SIDE_BAR_MARGIN.OPENED
         : SIDE_BAR_MARGIN.CLOSED;
 
+    document.documentElement.style.setProperty("--margin-side-menu-margin", sideBarStyleWidth);
     function handleMenuActiveChange() {
         setIsMenuActive(!isMenuActive);
     }
