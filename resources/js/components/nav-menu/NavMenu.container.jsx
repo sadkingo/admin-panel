@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import NavMenu from "./NavMenu.component";
 
-function NavMenuContainer({ isMenuActive, setIsMenuActive }) {
+function NavMenuContainer() {
+    const [isMenuActive, setIsMenuActive] = useState(true);
+
     return (
         <NavMenu
             isMenuActive={isMenuActive}
