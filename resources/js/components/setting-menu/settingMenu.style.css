@@ -35,7 +35,7 @@
     width: 400px;
     max-height: 100vh;
     padding: 24px;
-    transition: all 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+    transition: all 0.75s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
     background-color: var(--color-bg);
 }
 .sidebar-menu:dir(ltr) {
