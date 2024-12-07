@@ -6,26 +6,16 @@ import Dashboard from "@pages/dashboard";
 import Login from "@pages/login";
 import SingUp from "@pages/sign-up";
 import ErrorPage from "@pages/ErrorPage";
-import Dev from "@pages/dev/Dev";
 
 const router = createBrowserRouter([{
     path: "/login",
     element: <Login />
 }, {
     path: "/",
-    element: <Dashboard/>
+    element: <Dashboard />
 }, {
     path: "/sign-up",
     element: <SingUp />
-}, {
-    path: "/dev",
-    element: (process.env.NODE_ENV === 'development')
-        ? (<Dev />)
-        : <ErrorPage
-            errorNumber={404}
-            errorTitle="Oops! This Page is Not Found."
-            errorSubtitle="The requested page dose not exist"
-        />
 }, {
     path: "*",
     element: <ErrorPage
