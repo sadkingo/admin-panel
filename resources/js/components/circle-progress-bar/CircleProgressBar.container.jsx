@@ -1,6 +1,7 @@
 import CircleProgressBar from "./CircleProgressBar.component";
 
 function CircleProgressBarContainer({
+    className,
     valueStart = 0,
     valueEnd,
     duration,
@@ -12,6 +13,7 @@ function CircleProgressBarContainer({
 
     return (
         <CircleProgressBar
+            className={className}
             valueStart={valueStart}
             valueEnd={valueEnd}
             duration={duration}

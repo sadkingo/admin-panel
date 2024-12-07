@@ -2,7 +2,8 @@
     stroke: var(--color-main);
 }
 .CircularProgressbar-trail {
-    stroke: gray;
+    stroke: var(--color-bg-3);
+    stroke-width: 4px;
 }
 .CircularProgressbar-text {
     fill: black;
@@ -16,5 +17,6 @@
     top: 0;
 }
 [data-test-id="CircularProgressbarWithChildren"] {
+    width: fit-content;
     height: fit-content;
 }

@@ -6,6 +6,7 @@ import AnimationProvider from "@components/animation-provider";
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 
 function CircleProgressBar({
+    className,
     valueStart = 0,
     valueEnd,
     duration,
@@ -26,8 +27,10 @@ function CircleProgressBar({
         >
             {percentage => (
                 <CircularProgressbarWithChildren
+                    className={className}
                     value={percentage}
                     styles={buildStyles({
+                        strokeLinecap: 'round',
                         pathTransition:
                             "stroke-dashoffset 1s ease 0s",
                     })}
