@@ -1,4 +1,4 @@
-import SettingMenu from "./settingMenu.component"
+import SettingMenu from "./SettingMenu.component"
 
 function settingMenuContainer() {
     return (
