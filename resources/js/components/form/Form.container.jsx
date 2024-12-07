@@ -1,6 +1,6 @@
 
 import idGenerator from "@util/idGenerator";
-import Form from "./form.component";
+import Form from "./Form.component";
 
 function FormContainer({
     id = "Form",
