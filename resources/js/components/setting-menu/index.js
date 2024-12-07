@@ -1,1 +1,1 @@
-export { default } from "./settingMenu.container"
+export { default } from "./SettingMenu.container"
