@@ -9,6 +9,7 @@ import Circle from "@components/circle"
 import SettingsSideBar from "@components/setting-menu"
 import DataTable from "@components/data-table"
 import StatCard from "@components/stat-card";
+import VisaCard from "@components/visa-card"
 
 export default function Dashboard({ data }) {
     const [cardGroupPosition, setCardGroupPosition] = useState(0)
@@ -32,6 +33,7 @@ export default function Dashboard({ data }) {
                         className={"area-chart card"}
                         height={350}
                     />
+                    <VisaCard  className="dashboard-content__visa-card"/>
                 </div>
             </div>
         </main>
