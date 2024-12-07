@@ -65,7 +65,7 @@ function FieldContainer({
         fieldRef.value = "";
     }
 
-    //todo get validation rules from the API
+    //TODO get validation rules from the API
     function getValidationRules() {
         return {}
     }

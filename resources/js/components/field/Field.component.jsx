@@ -31,7 +31,7 @@ const Field = forwardRef(function ({
         // CheckBoxes & radio
         "radio": renderCheckboxOrRadio,
         "checkbox": renderCheckboxOrRadio,
-        // Custom fields //todo: file select and textarea
+        // Custom fields //TODO: file select and textarea
         "file": renderFileField,
         "select": renderSelectField,
         "textarea": renderTextarea,
@@ -100,14 +100,14 @@ const Field = forwardRef(function ({
     }
 
     function renderFileField() {
-        //todo make file field component
+        //TODO make file field component
         return (
             <>renderFileField</>
         )
     }
 
     function renderSelectField() {
-        //todo make select field component
+        //TODO make select field component
         return (
             <>renderSelectField</>
         )
